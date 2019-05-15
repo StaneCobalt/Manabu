@@ -33,8 +33,9 @@
         </style>
     </head>
     <body>
-        <div class="container">
-            <div>
+        <div class="container" style="text-align:center;">
+            
+			<div>
                 <header style="text-align: center;">
                     <h1>Manabu</h1>
                     <hr/>
@@ -43,26 +44,24 @@
             </div>
             <br/>
 
-            <div class="row">
+            <div class="container">
                 <textarea id="display" rows="2" cols="100" readonly></textarea>
             </div>
-            <div class="row">
+			
+            <div class="container">
                 <button type="button" class="btn btn-success" onclick="copyKana()">Copy</button>
                 <button type="button" class="btn btn-warning" onclick="clearKana()">Clear</button>
             </div>
             <br/>
 
-            <div id="romajiView" class="container">
-                <div class="row">
-                    <div class="offset-sm-1 col-0-xs">
-                    </div>
-                
+            <div id="romajiView">
+                <div class="row justify-content-center">
                     <div class="col-5-sm col-12-xs">
-                        <div class="customRow">
+                        <div class="row">
                             <h5>Hiragana</h5>
                         </div>
 
-                        <div class="customRow">
+                        <div class="row">
                             <button type="button" class="btn-kana" onclick="addKana('&#x3042')">a</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x3044')">i</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x3046')">u</button>
@@ -70,7 +69,7 @@
                             <button type="button" class="btn-kana" onclick="addKana('&#x304A')">o</button>
                         </div>
 
-                        <div class="customRow">
+                        <div class="row">
                             <button type="button" class="btn-kana" onclick="addKana('&#x304B')">ka</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x304D')">ki</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x304F')">ku</button>
@@ -78,7 +77,7 @@
                             <button type="button" class="btn-kana" onclick="addKana('&#x3053')">ko</button>
                         </div>
                         
-                        <div class="customRow">
+                        <div class="row">
                             <button type="button" class="btn-kana" onclick="addKana('&#x3055')">sa</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x3057')">shi</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x3059')">su</button>
@@ -86,7 +85,7 @@
                             <button type="button" class="btn-kana" onclick="addKana('&#x305D')">so</button>
                         </div>
                         
-                        <div class="customRow">
+                        <div class="row">
                             <button type="button" class="btn-kana" onclick="addKana('&#x305F')">ta</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x3061')">chi</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x3064')">tsu</button>
@@ -94,7 +93,7 @@
                             <button type="button" class="btn-kana" onclick="addKana('&#x3068')">to</button>
                         </div>
 
-                        <div class="customRow">
+                        <div class="row">
                             <button type="button" class="btn-kana" onclick="addKana('&#x306A')">na</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x306B')">ni</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x306C')">nu</button>
@@ -102,7 +101,7 @@
                             <button type="button" class="btn-kana" onclick="addKana('&#x306E')">no</button>
                         </div>
                         
-                        <div class="customRow">
+                        <div class="row">
                             <button type="button" class="btn-kana" onclick="addKana('&#x306F')">ha</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x3072')">hi</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x3075')">fu</button>
@@ -110,7 +109,7 @@
                             <button type="button" class="btn-kana" onclick="addKana('&#x307B')">ho</button>
                         </div>
 
-                        <div class="customRow">
+                        <div class="row">
                             <button type="button" class="btn-kana" onclick="addKana('&#x307E')">ma</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x307F')">mi</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x3080')">mu</button>
@@ -118,15 +117,15 @@
                             <button type="button" class="btn-kana" onclick="addKana('&#x3082')">mo</button>
                         </div>
 
-                        <div class="customRow">
+                        <div class="row">
                             <button type="button" class="btn-kana" onclick="addKana('&#x3084')">ya</button>
-                            <span class="space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <span class="space"></span>
                             <button type="button" class="btn-kana" onclick="addKana('&#x3086')">yu</button>
-                            <span class="space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <span class="space"></span>
                             <button type="button" class="btn-kana" onclick="addKana('&#x3088')">yo</button>
                         </div>
                         
-                        <div class="customRow">
+                        <div class="row">
                             <button type="button" class="btn-kana" onclick="addKana('&#x3089')">ra</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x308A')">ri</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x308B')">ru</button>
@@ -134,28 +133,28 @@
                             <button type="button" class="btn-kana" onclick="addKana('&#x308D')">ro</button>
                         </div>
                     
-                        <div class="customRow">
+                        <div class="row">
                             <button type="button" class="btn-kana" onclick="addKana('&#x308F')">wa</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x3090')">wi</button>
-                            <span class="space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <span class="space"></span>
                             <button type="button" class="btn-kana" onclick="addKana('&#x3091')">we</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x3092')">wo</button>
                         </div>
 
-                        <div class="customRow">
+                        <div class="row">
                             <button type="button" class="btn-kana" onclick="addKana('&#x3093')">n</button>
                         </div>
                     </div>
                     
-                    <div class="offset-sm-1 col-0-xs">
+                    <div class="offset-sm-2 col-0-xs">
                     </div>
 
                     <div class="col-5-sm col-12-xs">
-                        <div class="customRow">
+                        <div class="row">
                             <h5>Katakana</h5>
                         </div>
 
-                        <div class="customRow">
+                        <div class="row">
                             <button type="button" class="btn-kana" onclick="addKana('&#x30A2')">a</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x30A4')">i</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x30A6')">u</button>
@@ -163,7 +162,7 @@
                             <button type="button" class="btn-kana" onclick="addKana('&#x30AA')">o</button>
                         </div>
 
-                        <div class="customRow">
+                        <div class="row">
                             <button type="button" class="btn-kana" onclick="addKana('&#x30AB')">ka</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x30AD')">ki</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x30AF')">ku</button>
@@ -171,7 +170,7 @@
                             <button type="button" class="btn-kana" onclick="addKana('&#x30B3')">ko</button>
                         </div>
                         
-                        <div class="customRow">
+                        <div class="row">
                             <button type="button" class="btn-kana" onclick="addKana('&#x30B5')">sa</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x30B7')">shi</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x30B9')">su</button>
@@ -179,7 +178,7 @@
                             <button type="button" class="btn-kana" onclick="addKana('&#x30BD')">so</button>
                         </div>
                         
-                        <div class="customRow">
+                        <div class="row">
                             <button type="button" class="btn-kana" onclick="addKana('&#x30BF')">ta</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x30C1')">chi</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x30C4')">tsu</button>
@@ -187,7 +186,7 @@
                             <button type="button" class="btn-kana" onclick="addKana('&#x30C8')">to</button>
                         </div>
 
-                        <div class="customRow">
+                        <div class="row">
                             <button type="button" class="btn-kana" onclick="addKana('&#x30CA')">na</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x30CB')">ni</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x30CC')">nu</button>
@@ -195,7 +194,7 @@
                             <button type="button" class="btn-kana" onclick="addKana('&#x30CE')">no</button>
                         </div>
                         
-                        <div class="customRow">
+                        <div class="row">
                             <button type="button" class="btn-kana" onclick="addKana('&#x30CF')">ha</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x30D2')">hi</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x30D5')">fu</button>
@@ -203,7 +202,7 @@
                             <button type="button" class="btn-kana" onclick="addKana('&#x30DB')">ho</button>
                         </div>
 
-                        <div class="customRow">
+                        <div class="row">
                             <button type="button" class="btn-kana" onclick="addKana('&#x30DE')">ma</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x30DF')">mi</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x30E0')">mu</button>
@@ -211,15 +210,15 @@
                             <button type="button" class="btn-kana" onclick="addKana('&#x30E2')">mo</button>
                         </div>
 
-                        <div class="customRow">
+                        <div class="row">
                             <button type="button" class="btn-kana" onclick="addKana('&#x30E4')">ya</button>
-                            <span class="space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <span class="space"></span>
                             <button type="button" class="btn-kana" onclick="addKana('&#x30E6')">yu</button>
-                            <span class="space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <span class="space"></span>
                             <button type="button" class="btn-kana" onclick="addKana('&#x30E8')">yo</button>
                         </div>
                         
-                        <div class="customRow">
+                        <div class="row">
                             <button type="button" class="btn-kana" onclick="addKana('&#x30E9')">ra</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x30EA')">ri</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x30EB')">ru</button>
@@ -227,15 +226,15 @@
                             <button type="button" class="btn-kana" onclick="addKana('&#x30ED')">ro</button>
                         </div>
                     
-                        <div class="customRow">
+                        <div class="row">
                             <button type="button" class="btn-kana" onclick="addKana('&#x30EF')">wa</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x30F0')">wi</button>
-                            <span class="space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <span class="space"></span>
                             <button type="button" class="btn-kana" onclick="addKana('&#x30F1')">we</button>
                             <button type="button" class="btn-kana" onclick="addKana('&#x30F2')">wo</button>
                         </div>
 
-                        <div class="customRow">
+                        <div class="row">
                             <button type="button" class="btn-kana" onclick="addKana('&#x30F3')">n</button>
                         </div>
                     </div>
