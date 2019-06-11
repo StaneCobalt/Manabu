@@ -43,7 +43,19 @@ const hiragana1 = [
 
 const hiragana2 = [];
 
-const katakana1 = [];
+const katakana1 = [
+	'&#x30A2','&#x30A4','&#x30A6','&#x30A8','&#x30AA',
+	'&#x30AB','&#x30AD','&#x30AF','&#x30B1','&#x30B3',
+	'&#x30B5','&#x30B7','&#x30B9','&#x30BB','&#x30BD',
+	'&#x30BF','&#x30C1','&#x30C4','&#x30C6','&#x30C8',
+	'&#x30CA','&#x30CB','&#x30CC','&#x30CD','&#x30CE',
+	'&#x30CF','&#x30D2','&#x30D5','&#x30D8','&#x30DB',
+	'&#x30DE','&#x30DF','&#x30E0','&#x30E1','&#x30E2',
+	'&#x30E4','&#x30E6','&#x30E8',
+	'&#x30E9','&#x30EA','&#x30EB','&#x30EC','&#x30ED',
+	'&#x30EF','&#x30F0','&#x30F1','&#x30F2',
+	'&#x30F3'
+];
 
 const katakana2 = [];
 
