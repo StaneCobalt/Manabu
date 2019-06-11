@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <title>Manabu | Type Japanese</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="js/kanaScripts.js" defer></script>
+        <style>
+            .btn-kana {
+                margin: 0.25em;
+                height: 40px;
+                width: 40px;
+                font-weight: bold;
+				display:inline-block;
+            }
+            .btn-warning, .btn-success {
+                color: #FFF !important;
+                font-weight: bold !important;
+                margin: 0.25em;
+            }
+        </style>
+    </head>
+    <body onload="setKeyboard()">
+        <div class="container" style="text-align:center">
+
+			<div>
+                <header style="text-align: center;">
+                    <h1>Manabu</h1>
+                    <hr/>
+                    <h4><em>Typing in Kana</em></h4>
+                </header>
+            </div>
+            <br/>
+
+            <div class="container">
+                <textarea id="display" rows="2" cols="100" readonly></textarea>
+            </div>
+
+            <div class="container">
+                <button type="button" class="btn btn-success" onclick="copyKana()">Copy</button>
+                <button type="button" class="btn btn-warning" onclick="clearKana()">Clear</button>
+				<button type="button" class="btn btn-warning" onclick="createButton('&#x3042', 'a')">Add</button>
+            </div>
+            <br/>
+
+            <div id="kanaView">
+                <div class="row justify-content-center">
+                    <div class="col-12-xs">
+                        <div id="keyboard"></div>
+					</div>
+				</div>
+            </div>
+
+        </div>
+    </body>
+</html>
