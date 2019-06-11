@@ -1,6 +1,6 @@
 const display = document.getElementById("display");
 const keyboard = document.getElementById("keyboard");
-var isRomaji = true;
+var isRomaji =true;
 var isHiragana = true;
 var isKatakana = false;
 var isShifted = false;
@@ -41,7 +41,13 @@ const hiragana1 = [
 	'&#x3093'
 ];
 
-const hiragana2 = [];
+const hiragana2 = [
+	'&#x304C','&#x304E','&#x3050','&#x3052','&#x3054',
+	'&#x3056','&#x3058','&#x305A','&#x305C','&#x305E',
+	'&#x3060','&#x3062','&#x3065','&#x3067','&#x3069',
+	'&#x3070','&#x3073','&#x3076','&#x3079','&#x307C',
+	'&#x3071','&#x3074','&#x3077','&#x307A','&#x307D'
+];
 
 const katakana1 = [
 	'&#x30A2','&#x30A4','&#x30A6','&#x30A8','&#x30AA',
@@ -57,7 +63,13 @@ const katakana1 = [
 	'&#x30F3'
 ];
 
-const katakana2 = [];
+const katakana2 = [
+	'&#x30AC','&#x30AE','&#x30B0','&#x30B2','&#x30B4',
+	'&#x30B6','&#x30B8','&#x30BA','&#x30BC','&#x30BE',
+	'&#x30C0','&#x30C2','&#x30C5','&#x30C7','&#x30C9',
+	'&#x30D0','&#x30D3','&#x30D6','&#x30D9','&#x30DC',
+	'&#x30D1','&#x30D4','&#x30D7','&#x30DA','&#x30DD'
+];
 
 function addKana(kana) {
     display.innerHTML += kana;
