@@ -1,6 +1,6 @@
 const display = document.getElementById("display");
 const keyboard = document.getElementById("keyboard");
-var isRomaji =true;
+var isRomaji = false;
 var isHiragana = true;
 var isKatakana = false;
 var isShifted = false;
@@ -119,8 +119,14 @@ function createKeyboard(kana, displayText) {
 }
 
 function createButton(kana, displayText) {
+	var textNode;
+	if(displayText[0] == "&") {
+		displayText = "0" + displayText.substring(2,7);
+		textNode = document.createTextNode(String.fromCodePoint(displayText));
+	} else {
+		textNode = document.createTextNode(displayText);
+	}
 	let button = document.createElement("button");
-	let textNode = document.createTextNode(displayText);
 	button.onclick = function() {
 		display.innerHTML += kana;
 	}
