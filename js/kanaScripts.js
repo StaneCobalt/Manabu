@@ -1,5 +1,7 @@
 const display = document.getElementById("display");
 const keyboard = document.getElementById("keyboard");
+const kanaSwitch = document.getElementById("kanaSwitch");
+const shiftSwitch = document.getElementById("shiftSwitch");
 var isRomaji = false;
 var isHiragana = true;
 var isKatakana = false;
@@ -82,6 +84,34 @@ function clearKana() {
 function copyKana() {
     display.select();
     document.execCommand("copy");
+}
+
+function shift() {
+	isShifted = !isShifted;
+	clearKeyboard();
+	setKeyboardMode();
+	if(isShifted)
+		shiftSwitch.classList.add("btn-success");
+	else
+		shiftSwitch.classList.remove("btn-success");
+}
+
+function switchKana() {
+	isHiragana = !isHiragana;
+	isKatakana = !isKatakana;
+	clearKeyboard();
+	setKeyboardMode();
+	kanaSwitch.innerHTML = !isHiragana ? "Hiragana" : "Katakana";
+}
+
+function switchRomaji() {
+	isRomaji = !isRomaji;
+	clearKeyboard();
+	setKeyboardMode();
+	if(isRomaji)
+		romajiSwitch.classList.add("btn-success");
+	else
+		romajiSwitch.classList.remove("btn-success");
 }
 
 function setKeyboardMode() {
