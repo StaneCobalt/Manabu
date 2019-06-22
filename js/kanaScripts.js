@@ -138,12 +138,7 @@ function setKeyboardMode() {
 
 function createKeyboard(kana, displayText) {
 	let count = 0;
-	let windowWidth = window.innerWidth;
-	var keyBoardLength;
-	if(windowWidth < 800)
-		keyBoardLength = 6;
-	else
-		keyBoardLength = 10;
+	let keyBoardLength = (window.innerWidth < 800) ? 6 : 10;
 	let size = kana.length;
 	for(let i = 0; i < size; i++) {
 		createButton(kana[i], displayText[i]);

@@ -1,3 +1,7 @@
+body {
+	background-color: #ffffe6;
+}
+
 .btn-kana {
 	margin: 0.25em;
 	height: 40px;
@@ -6,53 +10,68 @@
 	font-size:1.25em;
 	display: inline-block;
 }
+
 .btn-control {
 	font-weight: bold !important;
 	margin: 0.25em;
 }
+
 header {
 	text-align: center;
 }
+
 h1 {
 	font-size: 4em;
 }
+
 h1, h5 {
 	font-weight: bolder;
 }
+
 #display {
 	width: 80%;
 }
+
 @media screen and (max-width: 800px) {
 	#display {
 		width: 100%;
 	}
 }
+
 #mainBody {
 	height: 95%;
 	clear: both;
 	display: block;
 }
+
 .customFooter {
 	position: relative;
 	bottom: 0;
 }
+
 #masterContainer {
+	background-color: transparent;
 	text-align: center;
 }
+
 .background {
 	background-image: url("../img/dragon.jpg");
 	background-repeat: repeat;
 	background-size: cover;
 }
+
 .leftDiv, .rightDiv, .centerDiv {
+	background-color: transparent;
 	float: left;
 	display: inline-block;
 	height: 100vh;
 	max-height: 100vh;
 }
+
 .leftDiv, .rightDiv {
 	width: 10%;
 }
+
 .centerDiv {
 	margin: 0 2%;
 	width: 76%;
