@@ -88,8 +88,7 @@ function copyKana() {
 
 function shift() {
 	isShifted = !isShifted;
-	clearKeyboard();
-	setKeyboardMode();
+	refreshKeyboard();
 	if(isShifted)
 		shiftSwitch.classList.add("btn-success");
 	else
@@ -99,15 +98,13 @@ function shift() {
 function switchKana() {
 	isHiragana = !isHiragana;
 	isKatakana = !isKatakana;
-	clearKeyboard();
-	setKeyboardMode();
+	refreshKeyboard();
 	kanaSwitch.innerHTML = !isHiragana ? "Hiragana" : "Katakana";
 }
 
 function switchRomaji() {
 	isRomaji = !isRomaji;
-	clearKeyboard();
-	setKeyboardMode();
+	refreshKeyboard();
 	if(isRomaji)
 		romajiSwitch.classList.add("btn-success");
 	else
@@ -138,14 +135,25 @@ function setKeyboardMode() {
 
 function createKeyboard(kana, displayText) {
 	let count = 0;
-	let keyBoardLength = (window.innerWidth < 800) ? 6 : 10;
 	let size = kana.length;
+	let keyBoardLength = getKeyboardLength();
 	for(let i = 0; i < size; i++) {
 		createButton(kana[i], displayText[i]);
 		count++;
 		if(count % keyBoardLength == 0)
 			insertBreak();
 	}
+}
+
+function getKeyboardLength() {
+	let keyBoardLength = 12;
+	if(window.innerWidth < 600)
+		keyBoardLength = 4;
+	else if(window.innerWidth < 800)
+		keyBoardLength = 6;
+	else if(window.innerWidth < 1000)
+		keyBoardLength = 10;
+	return keyBoardLength;
 }
 
 function createButton(kana, displayText) {
@@ -174,3 +182,35 @@ function clearKeyboard() {
 	while(keyboard.firstChild)
 		keyboard.removeChild(keyboard.firstChild);
 }
+
+function refreshKeyboard() {
+	clearTimeout(refreshSize);
+	clearKeyboard();
+	setKeyboardMode();	
+}
+
+var refreshSize = setTimeout(function() {
+						clearKeyboard();
+						setKeyboardMode();	
+					}, 1000);
+
+const debounce = (func, wait, immediate) => {
+    var timeout;
+    return () => {
+        const context = this, args = arguments;
+        const later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        const callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+};
+
+$(document).ready(function() {
+	setKeyboardMode();
+});
+
+//window.addEventListener('resize', refreshSize);

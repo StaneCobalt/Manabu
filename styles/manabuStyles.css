@@ -2,18 +2,17 @@ body {
 	background-color: #ffffe6;
 }
 
-.btn-kana {
-	margin: 0.25em;
-	height: 40px;
-	width: 40px;
-	font-weight: bold;
-	font-size:1.25em;
-	display: inline-block;
-}
-
-.btn-control {
+.btn-kana, .btn-control {
 	font-weight: bold !important;
 	margin: 0.25em;
+	text-align: center;
+}
+
+.btn-kana {
+	height: 40px;
+	width: 40px;
+	font-size:1.25em;
+	display: inline-block;
 }
 
 header {

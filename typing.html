@@ -3,11 +3,12 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <title>Manabu | Learn Japanese</title>
+        <title>Manabu | Typing in Kana</title>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="js/kanaScripts.js" defer></script>
         <link rel="stylesheet" href="styles/manabuStyles.css" />
     </head>
     <body>
@@ -15,33 +16,42 @@
 			<div class="background leftDiv"></div>
 			
 			<div class="centerDiv">
-
 				<div id="mainBody">
 					<div>
 						<header>
 							<h1>まなぶ</h1>
 							<h5>Manabu</h5>
 							<hr/>
-							<h4><em>Learn Japanese</em></h4>
+							<h4><em>Typing in Kana</em></h4>
 						</header>
 					</div>
-                    <br/>
-                    
-                    <div>
-                        <ul style="list-style: none; margin: 0; padding: 0;">
-                            <a href="cards.html"><li>Learn Kana</li></a>
-                            <a href="typing.html"><li>Type in Kana</li></a>
-                        </ul>
-                    </div>
+					<br/>
 
-                </div> 
-                
-                
+					<div class="container">
+						<textarea id="display" rows="2" readonly></textarea>
+					</div>
 
+					<div class="container">
+						<button id="romajiSwitch" type="button" class="btn btn-control" onclick="switchRomaji()">Romaji</button>
+						<button id="kanaSwitch" type="button" class="btn btn-control" style="width:6em" onclick="switchKana()">Katakana</button>
+						<button id="shiftSwitch" type="button" class="btn btn-control" onclick="shift()">Shift</button>
+						<button type="button" class="btn btn-control" onclick="copyKana()">Copy</button>
+						<button type="button" class="btn btn-control" onclick="clearKana()">Clear</button>
+					</div>
+					<br/>
+
+					<div id="kanaView">
+						<div class="row justify-content-center">
+							<div class="col-12-xs">
+								<div id="keyboard"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
 				<div class="customFooter">
 					<a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by macrovector_official - www.freepik.com</a>
-                </div>
-
+				</div>
 			</div>
 			
 			<div class="background rightDiv"></div>
