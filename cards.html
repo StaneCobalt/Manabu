@@ -9,8 +9,10 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="styles/manabuStyles.css" />
+        <script type="text/javascript" src="js/kana.js"></script>
+        <script src="js/kanaCards.js" defer></script>
     </head>
-    <body>
+    <body onload="setCards()">
         <div id="masterContainer" class="container-fluid">
 			<div class="background leftDiv"></div>
 			
@@ -27,13 +29,13 @@
 					</div>
                     <br/>
                     
-                    <div>
-                        <div class="card" style="width: 80%; left: 0; top: 0; margin: 0 auto;">
+                    <div id="card-container">
+                        <!-- <div class="card kana-card">
                             <div class="card-body">
-                                <h5 class="card-title" id="title">hirigana - ka</h5>
+                                <h5 class="card-title" id="title">hiragana - ka</h5>
                                 <p class="card-text" id="kana" style="font-size: 5em;">#</p>
                             </div>
-                        </div>
+                        </div> -->
 
                     </div>
 
