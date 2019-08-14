@@ -2,26 +2,56 @@ const romaji = kana["romaji1"];
 const katakana = kana["katakana1"];
 const hiragana = kana["hiragana1"];
 const allKana = katakana.concat(hiragana);
-const answers = romaji.concat(romaji);
 const container = document.getElementById("card-container");
 
 var cards = [];
 var answerKey = [];
+var answers;
+
+var numCards = 10;
+var kanaType;
 
 function setCards() {
-    shuffle();
+    reset();
+    setOptions();
+    shuffle(numCards);
     displayCards();
 }
 
-function shuffle(amount = 9) {
-    var size = allKana.length;
+function setOptions() {
+    let n = document.getElementById('numCards');
+    let t = document.getElementById('kanaType');
+    numCards = n.options[n.selectedIndex].value;
+    let kanaTypeString = t.options[t.selectedIndex].value;
+    switch(kanaTypeString) {
+        case 'Hiragana':
+            kanaType = hiragana;
+            answers = romaji;
+            break;
+        case 'Katakana':
+            kanaType = katakana;
+            answers = romaji;
+            break;
+        case 'Both':
+            kanaType = allKana;
+            answers = romaji.concat(romaji);
+            break;
+        default:
+            kanaType = hiragana;
+            answers = romaji;
+            break;
+    }
+}
+
+function shuffle(amount) {
+    var size = kanaType.length;
 
     for (let i = 0; i < amount; i++) {
         var random = 0;
         var kanaSelection = "";
         do {
             random = Math.floor(Math.random() * size);
-            kanaSelection = allKana[random];
+            kanaSelection = kanaType[random];
         } while (cards.find((text) => {return text == kanaSelection}));
         cards.push(kanaSelection);
         answerKey.push(answers[random]);
@@ -31,12 +61,14 @@ function shuffle(amount = 9) {
 function reset() {
     cards = [];
     answerKey = [];
+    kanaType = null;
+    numCards = 10;
     while (container.firstChild)
 		container.removeChild(container.firstChild);
 }
 
 function displayCards() {
-    cards.forEach((text) => {        
+    cards.forEach((text) => {
         container.appendChild(makeCard(text));
     });
 }

@@ -12,7 +12,7 @@
         <script type="text/javascript" src="js/kana.js"></script>
         <script src="js/kanaCards.js" defer></script>
     </head>
-    <body onload="setCards()">
+    <body>
         <div id="masterContainer" class="container-fluid">
 			<div class="background leftDiv"></div>
 			
@@ -28,16 +28,31 @@
 						</header>
 					</div>
                     <br/>
-                    
-                    <div id="card-container">
-                        <!-- <div class="card kana-card">
-                            <div class="card-body">
-                                <h5 class="card-title" id="title">hiragana - ka</h5>
-                                <p class="card-text" id="kana" style="font-size: 5em;">#</p>
-                            </div>
-                        </div> -->
 
+                    <div class="container">
+                        <div class="cardForm" style="max-width: 300px; text-align: left;">
+                            <div class="form-group">
+                                <label for="numCards">Number of cards</label>
+                                <select class="form-control" id="numCards">
+                                    <option>5</option>
+                                    <option selected="selected">10</option>
+                                    <option>20</option>
+                                </select>
+                                <br/>
+
+                                <label for="kanaType">Kana type</label>
+                                <select class="form-control" id="kanaType">
+                                    <option selected="selected">Hiragana</option>
+                                    <option>Katakana</option>
+                                    <option>Both</option>
+                                </select>
+                                <br/>
+                            </div>
+                            <button class="btn btn-primary" onclick="setCards()">Get Cards</button>
+                        </div>
                     </div>
+
+                    <div id="card-container"></div>
 
                 </div> 
                 

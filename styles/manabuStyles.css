@@ -96,3 +96,7 @@ h1, h5 {
 .show-text {
 	display: inline-block;
 }
+
+#card-container {
+	margin-top: 1em;
+}
