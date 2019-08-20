@@ -101,3 +101,13 @@ h1, h5 {
 #card-container {
 	margin-top: 1em;
 }
+
+#japanPic {
+	margin-top: 1em;
+	background-color: transparent;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-image: url("#");
+	min-height: 500px;
+}
