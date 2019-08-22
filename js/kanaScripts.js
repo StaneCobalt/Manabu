@@ -14,12 +14,31 @@ const katakana2 = kana["katakana2"];
 const hiragana1 = kana["hiragana1"];
 const hiragana2 = kana["hiragana2"];
 
+function getKey(event) {
+	let key = event.keyCode;
+    let keyString = String(key);
+    let result = keyboardValues.findIndex(kv => kv.uni_char == keyString);
+    if(result > -1) {
+		// let letter = String.fromCodePoint(keyboardValues[result].jn);
+		let letter = keyboardValues[result].jn;
+		addKana(letter);
+	}
+}
+
+function removeChar(event) {
+	let newString = display.value.substring(0, display.value.length-1);
+	display.innerHTML = newString;
+	display.value = newString;
+}
+
 function addKana(kana) {
-    display.innerHTML += kana;
+	display.innerHTML += kana;
+	display.value = display.innerHTML;
 }
 
 function clearKana() {
-    display.innerHTML = '';
+	display.innerHTML = '';
+	display.value = '';
 }
 
 function copyKana() {
@@ -152,6 +171,8 @@ const debounce = (func, wait, immediate) => {
 
 $(document).ready(function() {
 	setKeyboardMode();
+	display.value = '';
+	display.innerHTML = '';
 });
 
-window.addEventListener('resize', refreshSize);
+// window.addEventListener('resize', refreshSize);
