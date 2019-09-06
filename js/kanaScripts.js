@@ -25,20 +25,23 @@ function getKey(event) {
 	}
 }
 
-function removeChar(event) {
-	let newString = display.value.substring(0, display.value.length-1);
-	display.innerHTML = newString;
-	display.value = newString;
-}
-
-function addKana(kana) {
-	display.innerHTML += kana;
+function updateKeyboardDisplay(displayValue) {
+	display.innerHTML = displayValue;
 	display.value = display.innerHTML;
 }
 
+function removeChar(event) {
+	let newString = display.value.substring(0, display.value.length-1);
+	updateKeyboardDisplay(newString);
+}
+
+function addKana(kana) {
+	let newString = display.innerHTML + kana;
+	updateKeyboardDisplay(newString);
+}
+
 function clearKana() {
-	display.innerHTML = '';
-	display.value = '';
+	updateKeyboardDisplay('');
 }
 
 function copyKana() {
@@ -126,7 +129,7 @@ function createButton(kana, displayText) {
 	}
 	let button = document.createElement("button");
 	button.onclick = function() {
-		display.innerHTML += kana;
+		updateKeyboardDisplay(display.innerHTML + kana);
 	}
 	button.classList.add("btn-kana");
 	button.appendChild(textNode);
@@ -171,8 +174,7 @@ const debounce = (func, wait, immediate) => {
 
 $(document).ready(function() {
 	setKeyboardMode();
-	display.value = '';
-	display.innerHTML = '';
+	clearKana();
 });
 
 // window.addEventListener('resize', refreshSize);
