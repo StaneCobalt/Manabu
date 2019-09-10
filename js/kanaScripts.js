@@ -19,7 +19,6 @@ function getKey(event) {
     let keyString = String(key);
     let result = keyboardValues.findIndex(kv => kv.uni_char == keyString);
     if(result > -1) {
-		// let letter = String.fromCodePoint(keyboardValues[result].jn);
 		let letter = keyboardValues[result].jn;
 		addKana(letter);
 	}
@@ -47,6 +46,15 @@ function clearKana() {
 function copyKana() {
     display.select();
     document.execCommand("copy");
+}
+
+function translateKana() {
+	let url = "https://translate.google.com/#view=home&op=translate&sl=ja&tl=en&text=";
+	url += display.value;
+	if(display.value)
+		window.open(url, "_blank");
+	else
+		alert("Please supply a value to translate");
 }
 
 function shift() {
@@ -156,21 +164,6 @@ var refreshSize = setTimeout(function() {
 						clearKeyboard();
 						setKeyboardMode();	
 					}, 1000);
-
-const debounce = (func, wait, immediate) => {
-    var timeout;
-    return () => {
-        const context = this, args = arguments;
-        const later = function() {
-            timeout = null;
-            if (!immediate) func.apply(context, args);
-        };
-        const callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
-    };
-};
 
 $(document).ready(function() {
 	setKeyboardMode();
