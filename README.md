@@ -10,8 +10,8 @@ This is a web project for helping learn the kana, including both Hiragana and Ka
 - Select 5, 10, 20, or all cards
 - Click on the "Show Answer" to reveal the english pronunciation
 
-### Keyboard
-- Includes a romaji toggle to help newer learners
+### Virtual Keyboard
+- Includes a romaji toggle
+- Shift button can be used to select Dakuten and Handakuten
 - Can redirect the typed text into Google Translate for your convenience
-- Keyboard is currently best used by clicking the provided buttons
 - A typing feature that maps your english keyboard to japanese currently works with limited functionality (only alphabet keys work)
