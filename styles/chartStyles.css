@@ -1,0 +1,26 @@
+.chart {
+    background-color: white;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 0.5em;
+    float: right;
+}
+.chart td {
+    font-weight: bold;
+    font-size: 2em;
+}
+.chart table tr:first-child td {
+    font-weight: normal;
+}
+.chart table td:first-child {
+    text-align: left;
+    min-width: 1.5em;
+    font-weight: normal;
+}
+.chart table thead td:first-child {
+    text-align: center;
+    font-weight: bold;
+}
+.chart td {
+    min-width: 1.25em;
+}

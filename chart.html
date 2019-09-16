@@ -10,19 +10,7 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <script src="js/pic.js"></script>
         <link rel="stylesheet" href="styles/manabuStyles.css" />
-        <style>
-            .chart {
-                background-color: white;
-                padding: 1em;
-                margin: 1em;
-                border-radius: 0.5em;
-                float: right;
-            }
-            .chart td {
-                font-weight: bold;
-                font-size: 2em;
-            }
-        </style>
+        <link rel="stylesheet" href="styles/chartStyles.css" />
     </head>
     <body>
         <div id="masterContainer" class="container-fluid">
@@ -52,9 +40,18 @@
                     <div class="chart">
                         <table>
                             <thead>
-                                <td colspan="5">Hiragana</td>
+                                <td colspan="6">Hiragana</td>
                             </thead>
                             <tr>
+                                <td>&nbsp;</td>
+                                <td>A</td>
+                                <td>I</td>
+                                <td>U</td>
+                                <td>E</td>
+                                <td>O</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
                                 <td>&#x3042;</td>
                                 <td>&#x3044;</td>
                                 <td>&#x3046;</td>
@@ -62,6 +59,7 @@
                                 <td>&#x304A;</td>
                             </tr>
                             <tr>
+                                <td>K</td>
                                 <td>&#x304B;</td>
                                 <td>&#x304D;</td>
                                 <td>&#x304F;</td>
@@ -69,6 +67,7 @@
                                 <td>&#x3053;</td>
                             </tr>
                             <tr>
+                                <td>S</td>
                                 <td>&#x3055;</td>
                                 <td>&#x3057;</td>
                                 <td>&#x3059;</td>
@@ -76,6 +75,7 @@
                                 <td>&#x305D;</td>
                             </tr>
                             <tr>
+                                <td>T</td>
                                 <td>&#x305F;</td>
                                 <td>&#x3061;</td>
                                 <td>&#x3064;</td>
@@ -83,6 +83,7 @@
                                 <td>&#x3068;</td>
                             </tr>
                             <tr>
+                                <td>N</td>
                                 <td>&#x306A;</td>
                                 <td>&#x306B;</td>
                                 <td>&#x306C;</td>
@@ -90,6 +91,7 @@
                                 <td>&#x306E;</td>
                             </tr>
                             <tr>
+                                <td>H</td>
                                 <td>&#x306F;</td>
                                 <td>&#x3072;</td>
                                 <td>&#x3075;</td>
@@ -97,6 +99,7 @@
                                 <td>&#x307B;</td>
                             </tr>
                             <tr>
+                                <td>M</td>
                                 <td>&#x307E;</td>
                                 <td>&#x307F;</td>
                                 <td>&#x3080;</td>
@@ -104,11 +107,15 @@
                                 <td>&#x3082;</td>
                             </tr>
                             <tr>
+                                <td>Y</td>
                                 <td>&#x3084;</td>
+                                <td>&nbsp;</td>
                                 <td>&#x3086;</td>
+                                <td>&nbsp;</td>
                                 <td>&#x3088;</td>
                             </tr>
                             <tr>
+                                <td>R</td>
                                 <td>&#x3089;</td>
                                 <td>&#x308A;</td>
                                 <td>&#x308B;</td>
@@ -116,16 +123,229 @@
                                 <td>&#x308D;</td>
                             </tr>
                             <tr>
+                                <td>W</td>
                                 <td>&#x308F;</td>
                                 <td>&#x3090;</td>
+                                <td>&nbsp;</td>
                                 <td>&#x3091;</td>
                                 <td>&#x3092;</td>
                             </tr>
                             <tr>
+                                <td>n</td>
                                 <td>&#x3093;</td>
+                            </tr>
+                            <thead>
+                                <td colspan="6">
+                                    Hiragana
+                                    <p style="font-size: 0.75em">- Dakuten / Handakuten -</p>
+                                </td>
+                            </thead>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>A</td>
+                                <td>I</td>
+                                <td>U</td>
+                                <td>E</td>
+                                <td>O</td>
+                            </tr>
+                            <tr>
+                                <td>G</td>
+                                <td>&#x304C;</td>
+                                <td>&#x304E;</td>
+                                <td>&#x3050;</td>
+                                <td>&#x3052;</td>
+                                <td>&#x3054;</td>
+                            </tr>
+                            <tr>
+                                <td>Z</td>
+                                <td>&#x3056;</td>
+                                <td>&#x3058;</td>
+                                <td>&#x305A;</td>
+                                <td>&#x305C;</td>
+                                <td>&#x305E;</td>
+                            </tr>
+                            <tr>
+                                <td>D</td>
+                                <td>&#x3060;</td>
+                                <td>&#x3062;</td>
+                                <td>&#x3065;</td>
+                                <td>&#x3067;</td>
+                                <td>&#x3069;</td>
+                            </tr>
+                            <tr>
+                                <td>B</td>
+                                <td>&#x3070;</td>
+                                <td>&#x3073;</td>
+                                <td>&#x3076;</td>
+                                <td>&#x3079;</td>
+                                <td>&#x307C;</td>
+                            </tr>
+                            <tr>
+                                <td>P</td>
+                                <td>&#x3071;</td>
+                                <td>&#x3074;</td>
+                                <td>&#x3077;</td>
+                                <td>&#x307A;</td>
+                                <td>&#x307D;</td>
                             </tr>
                         </table>
                     </div>
+
+                    <div class="chart">
+                            <table>
+                                <thead>
+                                    <td colspan="6">Katakana</td>
+                                </thead>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>A</td>
+                                    <td>I</td>
+                                    <td>U</td>
+                                    <td>E</td>
+                                    <td>O</td>
+                                </tr>
+                                <tr>
+                                    <td>-</td>
+                                    <td>&#x30A2;</td>
+                                    <td>&#x30A4;</td>
+                                    <td>&#x30A6;</td>
+                                    <td>&#x30A8;</td>
+                                    <td>&#x30AA;</td>
+                                </tr>
+                                <tr>
+                                    <td>K</td>
+                                    <td>&#x30AB;</td>
+                                    <td>&#x30AD;</td>
+                                    <td>&#x30AF;</td>
+                                    <td>&#x30B1;</td>
+                                    <td>&#x30B3;</td>
+                                </tr>
+                                <tr>
+                                    <td>S</td>
+                                    <td>&#x30B5;</td>
+                                    <td>&#x30B7;</td>
+                                    <td>&#x30B9;</td>
+                                    <td>&#x30BB;</td>
+                                    <td>&#x30BD;</td>
+                                </tr>
+                                <tr>
+                                    <td>T</td>
+                                    <td>&#x30BF;</td>
+                                    <td>&#x30C1;</td>
+                                    <td>&#x30C4;</td>
+                                    <td>&#x30C6;</td>
+                                    <td>&#x30C8;</td>
+                                </tr>
+                                <tr>
+                                    <td>N</td>
+                                    <td>&#x30CA;</td>
+                                    <td>&#x30CB;</td>
+                                    <td>&#x30CC;</td>
+                                    <td>&#x30CD;</td>
+                                    <td>&#x30CE;</td>
+                                </tr>
+                                <tr>
+                                    <td>H</td>
+                                    <td>&#x30CF;</td>
+                                    <td>&#x30D2;</td>
+                                    <td>&#x30D5;</td>
+                                    <td>&#x30D8;</td>
+                                    <td>&#x30DB;</td>
+                                </tr>
+                                <tr>
+                                    <td>M</td>
+                                    <td>&#x30DE;</td>
+                                    <td>&#x30DF;</td>
+                                    <td>&#x30E0;</td>
+                                    <td>&#x30E1;</td>
+                                    <td>&#x30E2;</td>
+                                </tr>
+                                <tr>
+                                    <td>Y</td>
+                                    <td>&#x30E4;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&#x30E6;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&#x30E8;</td>
+                                </tr>
+                                <tr>
+                                    <td>R</td>
+                                    <td>&#x30E9;</td>
+                                    <td>&#x30EA;</td>
+                                    <td>&#x30EB;</td>
+                                    <td>&#x30EC;</td>
+                                    <td>&#x30ED;</td>
+                                </tr>
+                                <tr>
+                                    <td>W</td>
+                                    <td>&#x30EF;</td>
+                                    <td>&#x30F0;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&#x30F1;</td>
+                                    <td>&#x30F2;</td>
+                                </tr>
+                                <tr>
+                                    <td>n</td>
+                                    <td>&#x30F3;</td>
+                                </tr>
+                                <thead>
+                                    <td colspan="6">
+                                        Katakana
+                                        <p style="font-size: 0.75em">- Dakuten / Handakuten -</p>
+                                    </td>
+                                </thead>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td>A</td>
+                                    <td>I</td>
+                                    <td>U</td>
+                                    <td>E</td>
+                                    <td>O</td>
+                                </tr>
+                                <tr>
+                                    <td>G</td>
+                                    <td>&#x30AC;</td>
+                                    <td>&#x30AE;</td>
+                                    <td>&#x30B0;</td>
+                                    <td>&#x30B2;</td>
+                                    <td>&#x30B4;</td>
+                                </tr>
+                                <tr>
+                                    <td>Z</td>
+                                    <td>&#x30B6;</td>
+                                    <td>&#x30B8;</td>
+                                    <td>&#x30BA;</td>
+                                    <td>&#x30BC;</td>
+                                    <td>&#x30BE;</td>
+                                </tr>
+                                <tr>
+                                    <td>D</td>
+                                    <td>&#x30C0;</td>
+                                    <td>&#x30C2;</td>
+                                    <td>&#x30C5;</td>
+                                    <td>&#x30C7;</td>
+                                    <td>&#x30C9;</td>
+                                </tr>
+                                <tr>
+                                    <td>B</td>
+                                    <td>&#x30D0;</td>
+                                    <td>&#x30D3;</td>
+                                    <td>&#x30D6;</td>
+                                    <td>&#x30D9;</td>
+                                    <td>&#x30DC;</td>
+                                </tr>
+                                <tr>
+                                    <td>P</td>
+                                    <td>&#x30D1;</td>
+                                    <td>&#x30D4;</td>
+                                    <td>&#x30D7;</td>
+                                    <td>&#x30DA;</td>
+                                    <td>&#x30DD;</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        
 
                 </div> 
                 
