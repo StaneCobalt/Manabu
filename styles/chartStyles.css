@@ -3,7 +3,7 @@
     padding: 1em;
     margin: 1em;
     border-radius: 0.5em;
-    float: right;
+    display: inline-block;
 }
 .chart td {
     font-weight: bold;
