@@ -59,7 +59,7 @@ h1, h5 {
 .background {
 	background-image: url("../img/dragon.jpg");
 	background-repeat: repeat;
-	background-size: cover;
+	background-size: contain;
 }
 
 .leftDiv, .rightDiv, .centerDiv {
@@ -67,7 +67,6 @@ h1, h5 {
 	float: left;
 	/* display: inline-block; */
 	height: 100vh;
-	max-height: 100vh;
 }
 
 .leftDiv, .rightDiv {
@@ -77,31 +76,6 @@ h1, h5 {
 .centerDiv {
 	margin: 0 2%;
 	width: 76%;
-}
-
-.kana-card {
-	width: 150px;
-	height: 200px;
-	left: 0;
-	top: 0;
-	margin: 0 auto;
-	float: left;
-}
-
-.card-text {
-	font-size: 5em;
-}
-
-.hide-text {
-	display: none;
-}
-
-.show-text {
-	display: inline-block;
-}
-
-#card-container {
-	margin-top: 1em;
 }
 
 #japanPic {

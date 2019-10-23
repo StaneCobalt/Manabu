@@ -92,6 +92,8 @@ function setKeyboardMode() {
 			createKeyboard(hiragana2, hiragana2);
 		else
 			createKeyboard(hiragana1, hiragana1);
+		if(checkHeight())
+			resizeBackground();
 	} else if(isKatakana) {
 		if(isShifted && isRomaji)
 			createKeyboard(katakana2, romaji2);
@@ -101,6 +103,8 @@ function setKeyboardMode() {
 			createKeyboard(katakana2, katakana2);
 		else
 			createKeyboard(katakana1, katakana1);
+		if(checkHeight())
+			resizeBackground();
 	}
 }
 
