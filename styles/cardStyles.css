@@ -1,0 +1,24 @@
+.kana-card {
+	width: 150px;
+	height: 200px;
+	left: 0;
+	top: 0;
+	margin: 0 auto;
+	float: left;
+}
+
+.card-text {
+	font-size: 5em;
+}
+
+.hide-text {
+	display: none;
+}
+
+.show-text {
+	display: inline-block;
+}
+
+#card-container {
+	margin-top: 1em;
+}

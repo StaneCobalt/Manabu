@@ -71,6 +71,8 @@ function displayCards() {
     cards.forEach((text) => {
         container.appendChild(makeCard(text));
     });
+    if(checkHeight())
+		resizeBackground();
 }
 
 function makeCard(displayText) {
