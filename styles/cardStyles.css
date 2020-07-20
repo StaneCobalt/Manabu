@@ -22,3 +22,8 @@
 #card-container {
 	margin-top: 1em;
 }
+
+#btn-card {
+	background-color: #FFCC00;
+	border-color: #CCA300;
+}

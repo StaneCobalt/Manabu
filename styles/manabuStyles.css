@@ -51,6 +51,10 @@ h1, h5 {
 	z-index: -100;
 }
 
+	.customFooter a {
+		color: #CCA300;
+	}
+
 #masterContainer {
 	background-color: transparent;
 	text-align: center;
